@@ -1,4 +1,4 @@
-name: Release to Docker and git
+name: Build and Push to bizfly container registry.
 on:
   push:
     tags:
@@ -6,8 +6,8 @@ on:
 #on: [push, pull_request]
 jobs:
   
-  docker:
-    name: Release on Docker hub
+  release:
+    name: build and push to bizfly container registry
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
